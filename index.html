@@ -2,211 +2,493 @@
 <html lang="ro">
 <head>
     <meta charset="UTF-8">
-    <title>Adi Novac – Autor</title>
+    <title>Adi Novac – New York Love Machine</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Pagina oficială a autorului Adi Novac – New York Love Machine. Biografie, carte, contact.">
+    <meta name="description" content="Pagina oficială a autorului Adi Novac – New York Love Machine.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg: #f5f5f7;
-            --text: #1f1f23;
-            --accent: #2f6fed;
-            --accent-soft: #e3ebff;
-            --card: #ffffff;
+            --bg: #050816;
+            --bg-alt: #060b1b;
+            --card: rgba(15, 23, 42, 0.9);
+            --accent: #f97316;
+            --accent-soft: rgba(249, 115, 22, 0.08);
+            --accent-strong: #fb923c;
+            --text: #f9fafb;
+            --muted: #9ca3af;
+            --border: rgba(148, 163, 184, 0.35);
+            --radius-lg: 18px;
         }
-        * { box-sizing: border-box; margin: 0; padding: 0; }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
         body {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-            background: var(--bg);
+            font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: radial-gradient(circle at top, #111827 0, #020617 45%, #000 100%);
             color: var(--text);
             line-height: 1.6;
+            min-height: 100vh;
         }
-        header {
-            max-width: 960px;
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* Layout */
+        .page {
+            max-width: 1080px;
             margin: 0 auto;
-            padding: 40px 16px 16px;
+            padding: 20px 16px 40px;
         }
-        .hero-text h1 {
-            font-size: 36px;
+
+        /* Top bar */
+        .topbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 18px;
+        }
+        .logo-mark {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .logo-circle {
+            width: 30px;
+            height: 30px;
+            border-radius: 999px;
+            background: radial-gradient(circle at 30% 30%, #f97316, #7c2d12);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: 600;
+            color: #fefce8;
+            box-shadow: 0 0 18px rgba(248, 113, 22, 0.65);
+        }
+        .logo-text {
+            font-size: 14px;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--muted);
+        }
+
+        .nav {
+            display: flex;
+            gap: 14px;
+            font-size: 13px;
+        }
+        .nav a {
+            padding: 6px 10px;
+            border-radius: 999px;
+            color: var(--muted);
+            transition: background 0.15s ease, color 0.15s ease, transform 0.1s ease;
+        }
+        .nav a:hover {
+            background: rgba(15, 23, 42, 0.9);
+            color: var(--accent-strong);
+            transform: translateY(-1px);
+        }
+
+        /* Hero */
+        .hero {
+            position: relative;
+            overflow: hidden;
+            border-radius: 26px;
+            padding: 28px 22px 26px;
+            background: radial-gradient(circle at top left, rgba(249, 115, 22, 0.22), transparent 55%),
+                        radial-gradient(circle at bottom right, rgba(56, 189, 248, 0.18), transparent 60%),
+                        linear-gradient(135deg, #020617, #020617 40%, #020617);
+            border: 1px solid rgba(148, 163, 184, 0.4);
+            box-shadow: 0 25px 60px rgba(15, 23, 42, 0.8);
+            margin-bottom: 28px;
+        }
+        .hero-inner {
+            display: grid;
+            gap: 20px;
+        }
+        @media (min-width: 820px) {
+            .hero-inner {
+                grid-template-columns: 3fr 2fr;
+                align-items: center;
+            }
+        }
+
+        .hero-kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 3px 10px;
+            border-radius: 999px;
+            background: rgba(15, 23, 42, 0.85);
+            border: 1px solid rgba(148, 163, 184, 0.5);
+            font-size: 11px;
+            color: var(--muted);
+            margin-bottom: 12px;
+        }
+        .hero-kicker span {
+            width: 6px;
+            height: 6px;
+            border-radius: 999px;
+            background: #22c55e;
+            box-shadow: 0 0 12px rgba(34, 197, 94, 0.8);
+        }
+
+        .hero-title {
+            font-size: clamp(32px, 4vw, 40px);
+            letter-spacing: 0.03em;
             margin-bottom: 6px;
         }
-        .hero-text h2 {
-            font-size: 18px;
-            font-weight: 400;
-            color: #555;
+        .hero-subtitle {
+            font-size: 15px;
+            color: var(--muted);
             margin-bottom: 16px;
         }
-        .hero-text p {
-            max-width: 620px;
-            margin-bottom: 20px;
+        .hero-highlight {
+            font-size: 14px;
+            color: #e5e7eb;
+            max-width: 540px;
+            margin-bottom: 18px;
         }
+        .hero-highlight mark {
+            background: transparent;
+            color: var(--accent-strong);
+        }
+
         .hero-buttons {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
         }
         .btn {
-            padding: 10px 18px;
-            border-radius: 999px;
-            text-decoration: none;
-            font-size: 14px;
             display: inline-flex;
             align-items: center;
-            cursor: pointer;
+            gap: 8px;
+            padding: 9px 16px;
+            border-radius: 999px;
             border: 1px solid transparent;
+            font-size: 13px;
+            cursor: pointer;
+            transition: background 0.15s ease, transform 0.1s ease, box-shadow 0.15s ease, border-color 0.15s ease;
         }
         .btn-primary {
-            background: var(--accent);
-            color: white;
+            background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+            color: #111827;
+            font-weight: 500;
+            box-shadow: 0 12px 30px rgba(248, 113, 22, 0.55);
         }
         .btn-primary:hover {
-            background: #244ec9;
+            transform: translateY(-1px);
+            box-shadow: 0 18px 40px rgba(248, 113, 22, 0.7);
         }
         .btn-ghost {
-            background: transparent;
-            color: var(--accent);
-            border-color: var(--accent-soft);
+            background: rgba(15, 23, 42, 0.9);
+            color: var(--muted);
+            border-color: rgba(148, 163, 184, 0.6);
         }
         .btn-ghost:hover {
-            background: var(--accent-soft);
+            border-color: var(--accent-strong);
+            color: var(--accent-strong);
+            background: rgba(15, 23, 42, 0.95);
         }
-        main {
-            max-width: 960px;
-            margin: 0 auto 40px;
-            padding: 0 16px 24px;
+
+        .hero-tagline {
+            font-size: 11px;
+            color: var(--muted);
+            margin-top: 10px;
         }
-        section { margin-top: 40px; }
-        h3.section-title {
-            font-size: 22px;
+
+        .book-card {
+            border-radius: 20px;
+            padding: 18px 16px;
+            background: radial-gradient(circle at top, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.98));
+            border: 1px solid rgba(148, 163, 184, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+        .book-pill {
+            font-size: 11px;
+            color: var(--muted);
+            margin-bottom: 6px;
+        }
+        .book-title {
+            font-size: 18px;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: #e5e7eb;
+            margin-bottom: 8px;
+        }
+        .book-city {
+            font-size: 12px;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--accent-strong);
+            margin-bottom: 12px;
+        }
+        .book-blurb {
+            font-size: 13px;
+            color: #d1d5db;
             margin-bottom: 14px;
+        }
+        .chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            font-size: 11px;
+        }
+        .chip {
+            padding: 3px 9px;
+            border-radius: 999px;
+            background: rgba(31, 41, 55, 0.95);
+            border: 1px solid rgba(148, 163, 184, 0.55);
+            color: #e5e7eb;
+        }
+        .chip.hot {
+            border-color: rgba(248, 113, 22, 0.6);
+            background: rgba(24, 24, 27, 0.95);
+        }
+        .book-glow {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            background: radial-gradient(circle at 120% -20%, rgba(248, 113, 22, 0.45), transparent 55%);
+            opacity: 0.9;
+        }
+
+        /* Sections */
+        section {
+            margin-top: 32px;
+        }
+        .section-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+            color: var(--muted);
+            margin-bottom: 8px;
+        }
+        .section-title {
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+        .grid {
+            display: grid;
+            gap: 18px;
+        }
+        @media (min-width: 820px) {
+            .grid-2 {
+                grid-template-columns: 3fr 2fr;
+            }
         }
         .card {
             background: var(--card);
-            padding: 18px 20px;
-            border-radius: 14px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border);
+            padding: 16px 18px;
+            box-shadow: 0 18px 45px rgba(15, 23, 42, 0.7);
         }
-        .bio-text p { margin-bottom: 14px; }
-        .book-item { margin-bottom: 24px; }
-        .book-meta h4 {
-            font-size: 18px;
-            margin-bottom: 6px;
+        .card p {
+            font-size: 14px;
+            color: #e5e7eb;
         }
-        .book-meta p {
-            font-size: 15px;
+        .card p + p {
+            margin-top: 10px;
+        }
+
+        .meta-line {
+            font-size: 12px;
+            color: var(--muted);
+            margin-top: 10px;
+        }
+
+        .links-list {
+            list-style: none;
+            font-size: 14px;
+        }
+        .links-list li + li {
+            margin-top: 6px;
+        }
+        .links-list a {
+            color: var(--accent-strong);
+        }
+        .links-list a:hover {
+            text-decoration: underline;
+        }
+
+        /* Contact */
+        .contact-label {
+            font-size: 13px;
+            color: var(--muted);
             margin-bottom: 8px;
         }
-        .meta-tag {
-            display: inline-block;
-            padding: 3px 10px;
-            background: #eef0f4;
-            color: #444;
-            font-size: 12px;
-            border-radius: 999px;
-            margin-right: 6px;
-            margin-bottom: 6px;
+        .contact-email {
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--accent-strong);
         }
-        .links-list { list-style: none; font-size: 14px; }
-        .links-list li { margin-bottom: 6px; }
-        .links-list a { color: var(--accent); text-decoration: none; }
-        .links-list a:hover { text-decoration: underline; }
+
         footer {
+            margin-top: 34px;
+            font-size: 11px;
+            color: var(--muted);
             text-align: center;
-            font-size: 12px;
-            color: #777;
-            padding: 16px;
         }
     </style>
 </head>
-
 <body>
+<div class="page">
 
-<header>
-    <div class="hero-text">
-        <h1>Adi Novac</h1>
-        <h2>Autor de ficțiune contemporană</h2>
-        <p>
-            Adi Novac este un autor român pasionat de povești care explorează dorința, haosul interior și relațiile moderne. 
-            Scrisul lui îmbină realismul emoțional cu ritmul alert al vieții urbane, oferind cititorului atât intensitate,
-            cât și vulnerabilitate.
-        </p>
-        <div class="hero-buttons">
-            <a href="https://www.amazon.com/" class="btn btn-primary" target="_blank">Vezi cartea pe Amazon</a>
-            <a href="#contact" class="btn btn-ghost">Contactează-mă</a>
+    <header class="topbar">
+        <div class="logo-mark">
+            <div class="logo-circle">AN</div>
+            <div class="logo-text">Adi Novac</div>
         </div>
-    </div>
-</header>
+        <nav class="nav">
+            <a href="#despre">Despre</a>
+            <a href="#carte">Cartea</a>
+            <a href="#urmaresti">Urmărește</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
 
-<main>
-
-    <section id="bio">
-        <h3 class="section-title">Despre mine</h3>
-        <div class="card bio-text">
-            <p>
-                Adi Novac este un autor român pasionat de povești care explorează dorința, haosul interior și relațiile moderne.
-                Trăiește între introspecția personală și energia orașelor mari, iar scrierile sale surprind tensiunea dintre cele două spații.
-            </p>
-            <p>
-                Stilul lui combină vulnerabilitatea, ritmul urban și observația psihologică, creând povești care rămân cu cititorul 
-                mult după ce cartea s-a închis.
-            </p>
-        </div>
-    </section>
-
-    <section id="books">
-        <h3 class="section-title">Cărțile mele</h3>
-        <div class="card">
-
-            <div class="book-item">
-                <div class="book-meta">
-                    <h4>New York Love Machine</h4>
-                    <p>
-                        „New York Love Machine” urmărește un protagonist prins între ambiție, dorință și legături care îl consumă,
-                        într-un oraș care nu doarme și nu iartă. Povestea explorează iubirea ca adicție, transformare și supraviețuire –
-                        totul pe fundalul brutal și seducător al New York-ului.
-                    </p>
-                    <div>
-                        <span class="meta-tag">Ficțiune contemporană</span>
-                        <span class="meta-tag">Romance urban</span>
-                        <span class="meta-tag">Dramă psihologică</span>
-                        <span class="meta-tag">An publicare: 2025</span>
-                    </div>
-                    <p>
-                        Link:
-                        <a href="https://www.amazon.com/dp/ID-CARTE" target="_blank">vezi cartea pe Amazon</a>
-                    </p>
+    <section class="hero">
+        <div class="hero-inner">
+            <div>
+                <div class="hero-kicker">
+                    <span></span>
+                    Nou roman
+                    <strong style="font-weight:500; color:#e5e7eb; margin-left:4px;">New York Love Machine</strong>
+                </div>
+                <h1 class="hero-title">Povești despre dorință, haos și orașe care nu dorm.</h1>
+                <p class="hero-subtitle">
+                    Ficțiune contemporană urbană, cu relații complicate, decizii riscante și personaje care încearcă să nu se piardă pe ei înșiși.
+                </p>
+                <p class="hero-highlight">
+                    Iubirea ca adicție, ca transformare, ca supraviețuire. 
+                    <mark>New York Love Machine</mark> urmărește ce se întâmplă când vrei totul și, fără să-ți dai seama, începi să pierzi exact ce contează.
+                </p>
+                <div class="hero-buttons">
+                    <a href="https://www.amazon.com/dp/ID-CARTE" target="_blank" class="btn btn-primary">
+                        Vezi New York Love Machine pe Amazon
+                    </a>
+                    <a href="#carte" class="btn btn-ghost">
+                        Citește mai mult despre carte
+                    </a>
+                </div>
+                <div class="hero-tagline">
+                    Ficțiune contemporană • Romance urban • Dramă psihologică
                 </div>
             </div>
 
+            <div class="book-card" id="carte">
+                <div class="book-glow"></div>
+                <div style="position:relative; z-index:1;">
+                    <div class="book-pill">Roman de debut · 2025</div>
+                    <div class="book-title">New York Love Machine</div>
+                    <div class="book-city">New York City</div>
+                    <p class="book-blurb">
+                        Un protagonist prins între ambiție, dorință și legături care îl consumă, într-un oraș care nu iartă nimic. 
+                        Viață de noapte, mesaje la ore imposibile, promisiuni bune doar cât durează adrenalina.
+                    </p>
+                    <div class="chips">
+                        <div class="chip hot">Ficțiune contemporană</div>
+                        <div class="chip">Romance urban</div>
+                        <div class="chip">Dramă psihologică</div>
+                        <div class="chip">Pentru fanii poveștilor intense</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="links">
-        <h3 class="section-title">Unde mă poți urmări</h3>
-        <div class="card">
-            <ul class="links-list">
-                <li>Instagram: <a href="#" target="_blank">@adinovac</a></li>
-                <li>Newsletter: <a href="#" target="_blank">abonare la noutăți</a></li>
-            </ul>
+    <section id="despre">
+        <div class="section-label">Autor</div>
+        <h2 class="section-title">Despre Adi Novac</h2>
+        <div class="grid grid-2">
+            <div class="card">
+                <p>
+                    Adi Novac este un autor român pasionat de povești care explorează dorința, haosul interior și relațiile moderne.
+                    Îl interesează mai mult întrebările incomode decât răspunsurile perfecte și mai mult personajele imperfecte decât eroii clasici.
+                </p>
+                <p>
+                    Scrisul lui îmbină realismul emoțional cu ritmul orașelor mari: nopți care se termină prea târziu, decizii luate prea repede,
+                    mesaje șterse, reveniri, dependențe emoționale și momente în care totul pare să se rupă.
+                </p>
+            </div>
+            <div class="card">
+                <p>
+                    Când nu scrie, Adi observă oamenii, notează replici și construiește scene în minte: ce se întâmplă după ce se închide ușa,
+                    ce e în spatele unui mesaj simplu de “hai că vorbim”.
+                </p>
+                <p class="meta-line">
+                    Temele recurente: orașe care cer un preț, iubire ca negociere, roluri pe care le jucăm ca să nu rămânem singuri.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="urmaresti">
+        <div class="section-label">Online</div>
+        <h2 class="section-title">Unde poți urmări ce urmează</h2>
+        <div class="grid grid-2">
+            <div class="card">
+                <p>
+                    Noutăți despre lansări, fragmente din cărți și idei din culise vor fi anunțate mai întâi online. 
+                    Dacă vrei să prinzi următoarele proiecte din timp, urmărește-l pe Adi sau abonează-te la un newsletter scurt,
+                    fără spam.
+                </p>
+            </div>
+            <div class="card">
+                <ul class="links-list">
+                    <li>
+                        Amazon Author Page:
+                        <a href="https://www.amazon.com/author/adinovac" target="_blank">
+                            pagina de autor Amazon
+                        </a>
+                    </li>
+                    <li>
+                        Instagram:
+                        <a href="https://www.instagram.com/adinovac" target="_blank">
+                            @adinovac
+                        </a>
+                    </li>
+                    <li>
+                        Newsletter:
+                        <a href="#" target="_blank">
+                            abonează-te pentru noutăți și fragmente
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </section>
 
     <section id="contact">
-        <h3 class="section-title">Contact</h3>
+        <div class="section-label">Contact</div>
+        <h2 class="section-title">Invitații, colaborări, întrebări</h2>
         <div class="card">
-            <p>Pentru colaborări, interviuri sau întrebări:</p>
-            <p>Email: <a href="mailto:contact@adinovac.com">contact@adinovac.com</a></p>
+            <p class="contact-label">
+                Pentru interviuri, invitații la evenimente, cluburi de carte sau proiecte editoriale:
+            </p>
+            <p class="contact-email">
+                <a href="mailto:contact@adinovac.com">contact@adinovac.com</a>
+            </p>
+            <p class="meta-line">
+                Se răspunde în măsura posibilului; mesajele legate de carte au prioritate.
+            </p>
         </div>
     </section>
 
-</main>
-
-<footer>
-    © <span id="year"></span> Adi Novac. Toate drepturile rezervate.
-</footer>
+    <footer>
+        © <span id="year"></span> Adi Novac. New York Love Machine.
+    </footer>
+</div>
 
 <script>
     document.getElementById("year").textContent = new Date().getFullYear();
 </script>
-
 </body>
 </html>
