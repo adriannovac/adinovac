@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Despre femei și îngeri – Adi Novac</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body { margin:0; font-family:system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI",sans-serif; background:#050816; color:#f9fafb; }
+        a { color:inherit; text-decoration:none; }
+        .page { max-width:900px; margin:0 auto; padding:22px 18px 40px; }
+        header { display:flex; justify-content:space-between; align-items:center; margin-bottom:20px; }
+        .logo { font-weight:600; font-size:16px; }
+        .nav a { margin-left:16px; font-size:13px; color:#9ca3af; }
+        .nav a:hover { color:#f97316; }
+        .lang-toggle { font-size:12px; border:1px solid #4b5563; padding:4px 9px; border-radius:999px; background:transparent; color:#9ca3af; cursor:pointer; }
+        .lang-toggle:hover { border-color:#f97316; color:#f97316; }
+
+        .card {
+            background:#0f172a;
+            border-radius:18px;
+            border:1px solid rgba(148,163,184,0.45);
+            padding:18px 18px 20px;
+            box-shadow:0 20px 50px rgba(15,23,42,0.9);
+        }
+        h1 { font-size:24px; margin-bottom:6px; text-align:center; }
+        .subtitle { font-size:13px; color:#9ca3af; margin-bottom:14px; text-align:center; }
+        .meta { font-size:12px; color:#9ca3af; margin-bottom:16px; text-align:center; }
+        p { font-size:14px; line-height:1.6; margin-bottom:12px; }
+
+        .book-cover-large {
+            display:block;
+            width:100%;
+            max-width:260px;
+            margin:0 auto 16px;
+            border-radius:14px;
+            box-shadow:0 18px 40px rgba(15,23,42,0.75);
+        }
+
+        .back-link { margin-top:18px; font-size:13px; color:#f97316; display:inline-block; }
+        .back-link:hover { text-decoration:underline; }
+
+        [lang="ro"] { display:block; }
+        [lang="en"] { display:none; }
+        .lang-ro [lang="ro"] { display:block; }
+        .lang-ro [lang="en"] { display:none; }
+        .lang-en [lang="ro"] { display:none; }
+        .lang-en [lang="en"] { display:block; }
+    </style>
+</head>
+<body class="lang-ro">
+<div class="page">
+    <header>
+        <div class="logo"><a href="index.html">Adi Novac</a></div>
+        <div class="nav">
+            <a href="index.html#books">Books</a>
+            <button class="lang-toggle" onclick="toggleLang()">RO / EN</button>
+        </div>
+    </header>
+
+    <div class="card">
+        <img src="femei-ingeri-cover.jpg"
+             alt="Coperta Despre femei și îngeri"
+             class="book-cover-large">
+
+        <h1 lang="ro">Despre femei și îngeri</h1>
+        <h1 lang="en">On Women and Angels</h1>
+
+        <div class="subtitle" lang="ro">Femei reale, îngeri metaforici, idealizare și prăbușire.</div>
+        <div class="subtitle" lang="en">Real women, symbolic angels, idealization and collapse.</div>
+
+        <div class="meta" lang="ro">Proză scurtă / eseuri interconectate</div>
+        <div class="meta" lang="en">Short stories / interconnected essays</div>
+
+        <p lang="ro">
+            O colecție de texte care țes laolaltă relații, proiecții și imagini despre „femei perfecte”
+            și îngerii pe care ni-i inventăm ca să nu vedem realitatea. Cartea urmărește cum idealizarea se transformă
+            în presiune, cum fascinația alunecă în vinovăție și cum oamenii reali nu mai încap în rolurile pe care
+            le atribuim.
+        </p>
+        <p lang="ro">
+            Femeile de aici nu sunt sfinte, iar îngerii nu sunt luminoși. Sunt figuri prin care trec frustrare, dorință,
+            rușine și un fel de tandrețe obosită. Unele texte sunt aproape poezie, altele sunt reci și precise ca un raport.
+        </p>
+
+        <p lang="en">
+            A collection that weaves together relationships, projections and images of “perfect women”
+            and the angels we invent so we do not have to look at reality. The book follows how idealization
+            becomes pressure, fascination turns into guilt and real people no longer fit the roles we assign to them.
+        </p>
+        <p lang="en">
+            The women here are not saints and the angels are not pure light. They are figures through which frustration,
+            desire, shame and a tired kind of tenderness pass. Some pieces are almost poetic, others are cold and sharp
+            like a report.
+        </p>
+
+        <p lang="ro">
+            Link Amazon: va fi adăugat la publicare.
+        </p>
+        <p lang="en">
+            Amazon link: to be added upon publication.
+        </p>
+
+        <a href="index.html#books" class="back-link" lang="ro">← Înapoi la toate cărțile</a>
+        <a href="index.html#books" class="back-link" lang="en">← Back to all books</a>
+    </div>
+</div>
+
+<script>
+    function toggleLang(){
+        document.body.classList.toggle("lang-en");
+        document.body.classList.toggle("lang-ro");
+    }
+</script>
+</body>
+</html>
