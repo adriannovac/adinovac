@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Eu, Seinfeld și tumoarea – Adi Novac</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body { margin:0; font-family:system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI",sans-serif; background:#050816; color:#f9fafb; }
+        a { color:inherit; text-decoration:none; }
+        .page { max-width:900px; margin:0 auto; padding:22px 18px 40px; }
+        header { display:flex; justify-content:space-between; align-items:center; margin-bottom:20px; }
+        .logo { font-weight:600; font-size:16px; }
+        .nav a { margin-left:16px; font-size:13px; color:#9ca3af; }
+        .nav a:hover { color:#f97316; }
+        .lang-toggle { font-size:12px; border:1px solid #4b5563; padding:4px 9px; border-radius:999px; background:transparent; color:#9ca3af; cursor:pointer; }
+        .lang-toggle:hover { border-color:#f97316; color:#f97316; }
+
+        .card {
+            background:#0f172a;
+            border-radius:18px;
+            border:1px solid rgba(148,163,184,0.45);
+            padding:18px 18px 20px;
+            box-shadow:0 20px 50px rgba(15,23,42,0.9);
+        }
+        h1 { font-size:24px; margin-bottom:6px; text-align:center; }
+        .subtitle { font-size:13px; color:#9ca3af; margin-bottom:14px; text-align:center; }
+        .meta { font-size:12px; color:#9ca3af; margin-bottom:16px; text-align:center; }
+        p { font-size:14px; line-height:1.6; margin-bottom:12px; }
+
+        .book-cover-large {
+            display:block;
+            width:100%;
+            max-width:260px;
+            margin:0 auto 16px;
+            border-radius:14px;
+            box-shadow:0 18px 40px rgba(15,23,42,0.75);
+        }
+
+        .back-link { margin-top:18px; font-size:13px; color:#f97316; display:inline-block; }
+        .back-link:hover { text-decoration:underline; }
+
+        [lang="ro"] { display:block; }
+        [lang="en"] { display:none; }
+        .lang-ro [lang="ro"] { display:block; }
+        .lang-ro [lang="en"] { display:none; }
+        .lang-en [lang="ro"] { display:none; }
+        .lang-en [lang="en"] { display:block; }
+    </style>
+</head>
+<body class="lang-ro">
+<div class="page">
+    <header>
+        <div class="logo"><a href="index.html">Adi Novac</a></div>
+        <div class="nav">
+            <a href="index.html#books">Books</a>
+            <button class="lang-toggle" onclick="toggleLang()">RO / EN</button>
+        </div>
+    </header>
+
+    <div class="card">
+        <img src="eu-seinfeld-cover.jpg"
+             alt="Coperta Eu, Seinfeld și tumoarea"
+             class="book-cover-large">
+
+        <h1 lang="ro">Eu, Seinfeld și tumoarea</h1>
+        <h1 lang="en">Me, Seinfeld and the Tumor</h1>
+
+        <div class="subtitle" lang="ro">Corp, frică, umor negru.</div>
+        <div class="subtitle" lang="en">Body, fear, and dark humor.</div>
+
+        <div class="meta" lang="ro">Eseu lung / proză non-ficțională</div>
+        <div class="meta" lang="en">Long-form essay / narrative nonfiction</div>
+
+        <p lang="ro">
+            O carte despre ce se întâmplă când corpul îți devine dușman, iar serialele, glumele și referințele pop-culture
+            sunt singurele lucruri care mai au sens. Un amestec de confesiune, ironie și luciditate,
+            în care boala nu este nici metaforă, nici melodramă – ci un fundal constant, ca un zgomot de fond.
+        </p>
+        <p lang="ro">
+            Titlul leagă trei lucruri aparent incompatibile: un eu obosit, Seinfeld ca mecanism de autoironie
+            și tumoarea ca personaj secundar care intră peste toate. Carte pentru cei care au trecut prin spitale,
+            prin anxietăți sau pur și simplu prin noaptea în care nu au putut adormi.
+        </p>
+
+        <p lang="en">
+            A book about what happens when your own body becomes an enemy and sitcoms, jokes and pop-culture references
+            are the only things that still make sense. A mix of confession, irony and clear-eyed observation,
+            where illness is neither metaphor nor melodrama – it is simply there, like background noise.
+        </p>
+        <p lang="en">
+            The title connects three seemingly incompatible elements: a tired self, Seinfeld as a coping mechanism
+            and the tumor as a secondary character that barges into everything. A book for anyone who has dealt
+            with hospitals, anxiety or just the kind of night where sleep does not arrive.
+        </p>
+
+        <p lang="ro">
+            Link Amazon: va fi adăugat la publicare.
+        </p>
+        <p lang="en">
+            Amazon link: to be added upon publication.
+        </p>
+
+        <a href="index.html#books" class="back-link" lang="ro">← Înapoi la toate cărțile</a>
+        <a href="index.html#books" class="back-link" lang="en">← Back to all books</a>
+    </div>
+</div>
+
+<script>
+    function toggleLang(){
+        document.body.classList.toggle("lang-en");
+        document.body.classList.toggle("lang-ro");
+    }
+</script>
+</body>
+</html>
