@@ -2,493 +2,219 @@
 <html lang="ro">
 <head>
     <meta charset="UTF-8">
-    <title>Adi Novac – New York Love Machine</title>
+    <title>Adi Novac – Autor / Writer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Pagina oficială a autorului Adi Novac – New York Love Machine.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --bg: #050816;
-            --bg-alt: #060b1b;
-            --card: rgba(15, 23, 42, 0.9);
-            --accent: #f97316;
-            --accent-soft: rgba(249, 115, 22, 0.08);
-            --accent-strong: #fb923c;
-            --text: #f9fafb;
-            --muted: #9ca3af;
-            --border: rgba(148, 163, 184, 0.35);
-            --radius-lg: 18px;
-        }
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
         body {
-            font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-            background: radial-gradient(circle at top, #111827 0, #020617 45%, #000 100%);
-            color: var(--text);
-            line-height: 1.6;
-            min-height: 100vh;
+            margin:0;
+            font-family: Arial, sans-serif;
+            background:#fff;
+            color:#222;
         }
-        a {
-            color: inherit;
-            text-decoration: none;
+        header {
+            padding:24px;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            border-bottom:1px solid #ddd;
+        }
+        header h1 {
+            font-size:22px;
+            font-weight:600;
+            margin:0;
+        }
+        nav a {
+            margin-left:16px;
+            text-decoration:none;
+            color:#333;
+            font-size:14px;
+        }
+        nav a:hover { color:#111; }
+
+        .container {
+            max-width:900px;
+            margin:0 auto;
+            padding:30px 20px;
         }
 
-        /* Layout */
-        .page {
-            max-width: 1080px;
-            margin: 0 auto;
-            padding: 20px 16px 40px;
+        .lang-switch {
+            margin-top:10px;
+            font-size:14px;
         }
+        .lang-switch a {
+            margin-right:10px;
+            cursor:pointer;
+            color:#0077cc;
+        }
+        .lang-switch a:hover { text-decoration:underline; }
 
-        /* Top bar */
-        .topbar {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 18px;
+        .section {
+            margin-top:60px;
         }
-        .logo-mark {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
+        .section h2 {
+            font-size:20px;
+            margin-bottom:10px;
         }
-        .logo-circle {
-            width: 30px;
-            height: 30px;
-            border-radius: 999px;
-            background: radial-gradient(circle at 30% 30%, #f97316, #7c2d12);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 14px;
-            font-weight: 600;
-            color: #fefce8;
-            box-shadow: 0 0 18px rgba(248, 113, 22, 0.65);
-        }
-        .logo-text {
-            font-size: 14px;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            color: var(--muted);
-        }
+        .section p { line-height:1.5; }
 
-        .nav {
-            display: flex;
-            gap: 14px;
-            font-size: 13px;
+        .book {
+            margin-top:30px;
+            padding:20px;
+            border:1px solid #ddd;
+            border-radius:8px;
         }
-        .nav a {
-            padding: 6px 10px;
-            border-radius: 999px;
-            color: var(--muted);
-            transition: background 0.15s ease, color 0.15s ease, transform 0.1s ease;
+        .book h3 {
+            font-size:18px;
+            margin:0 0 6px 0;
         }
-        .nav a:hover {
-            background: rgba(15, 23, 42, 0.9);
-            color: var(--accent-strong);
-            transform: translateY(-1px);
-        }
-
-        /* Hero */
-        .hero {
-            position: relative;
-            overflow: hidden;
-            border-radius: 26px;
-            padding: 28px 22px 26px;
-            background: radial-gradient(circle at top left, rgba(249, 115, 22, 0.22), transparent 55%),
-                        radial-gradient(circle at bottom right, rgba(56, 189, 248, 0.18), transparent 60%),
-                        linear-gradient(135deg, #020617, #020617 40%, #020617);
-            border: 1px solid rgba(148, 163, 184, 0.4);
-            box-shadow: 0 25px 60px rgba(15, 23, 42, 0.8);
-            margin-bottom: 28px;
-        }
-        .hero-inner {
-            display: grid;
-            gap: 20px;
-        }
-        @media (min-width: 820px) {
-            .hero-inner {
-                grid-template-columns: 3fr 2fr;
-                align-items: center;
-            }
-        }
-
-        .hero-kicker {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 3px 10px;
-            border-radius: 999px;
-            background: rgba(15, 23, 42, 0.85);
-            border: 1px solid rgba(148, 163, 184, 0.5);
-            font-size: 11px;
-            color: var(--muted);
-            margin-bottom: 12px;
-        }
-        .hero-kicker span {
-            width: 6px;
-            height: 6px;
-            border-radius: 999px;
-            background: #22c55e;
-            box-shadow: 0 0 12px rgba(34, 197, 94, 0.8);
-        }
-
-        .hero-title {
-            font-size: clamp(32px, 4vw, 40px);
-            letter-spacing: 0.03em;
-            margin-bottom: 6px;
-        }
-        .hero-subtitle {
-            font-size: 15px;
-            color: var(--muted);
-            margin-bottom: 16px;
-        }
-        .hero-highlight {
-            font-size: 14px;
-            color: #e5e7eb;
-            max-width: 540px;
-            margin-bottom: 18px;
-        }
-        .hero-highlight mark {
-            background: transparent;
-            color: var(--accent-strong);
-        }
-
-        .hero-buttons {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 9px 16px;
-            border-radius: 999px;
-            border: 1px solid transparent;
-            font-size: 13px;
-            cursor: pointer;
-            transition: background 0.15s ease, transform 0.1s ease, box-shadow 0.15s ease, border-color 0.15s ease;
-        }
-        .btn-primary {
-            background: linear-gradient(135deg, var(--accent), var(--accent-strong));
-            color: #111827;
-            font-weight: 500;
-            box-shadow: 0 12px 30px rgba(248, 113, 22, 0.55);
-        }
-        .btn-primary:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 18px 40px rgba(248, 113, 22, 0.7);
-        }
-        .btn-ghost {
-            background: rgba(15, 23, 42, 0.9);
-            color: var(--muted);
-            border-color: rgba(148, 163, 184, 0.6);
-        }
-        .btn-ghost:hover {
-            border-color: var(--accent-strong);
-            color: var(--accent-strong);
-            background: rgba(15, 23, 42, 0.95);
-        }
-
-        .hero-tagline {
-            font-size: 11px;
-            color: var(--muted);
-            margin-top: 10px;
-        }
-
-        .book-card {
-            border-radius: 20px;
-            padding: 18px 16px;
-            background: radial-gradient(circle at top, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.98));
-            border: 1px solid rgba(148, 163, 184, 0.4);
-            position: relative;
-            overflow: hidden;
-        }
-        .book-pill {
-            font-size: 11px;
-            color: var(--muted);
-            margin-bottom: 6px;
-        }
-        .book-title {
-            font-size: 18px;
-            letter-spacing: 0.18em;
-            text-transform: uppercase;
-            color: #e5e7eb;
-            margin-bottom: 8px;
-        }
-        .book-city {
-            font-size: 12px;
-            letter-spacing: 0.25em;
-            text-transform: uppercase;
-            color: var(--accent-strong);
-            margin-bottom: 12px;
-        }
-        .book-blurb {
-            font-size: 13px;
-            color: #d1d5db;
-            margin-bottom: 14px;
-        }
-        .chips {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-            font-size: 11px;
-        }
-        .chip {
-            padding: 3px 9px;
-            border-radius: 999px;
-            background: rgba(31, 41, 55, 0.95);
-            border: 1px solid rgba(148, 163, 184, 0.55);
-            color: #e5e7eb;
-        }
-        .chip.hot {
-            border-color: rgba(248, 113, 22, 0.6);
-            background: rgba(24, 24, 27, 0.95);
-        }
-        .book-glow {
-            position: absolute;
-            inset: 0;
-            pointer-events: none;
-            background: radial-gradient(circle at 120% -20%, rgba(248, 113, 22, 0.45), transparent 55%);
-            opacity: 0.9;
-        }
-
-        /* Sections */
-        section {
-            margin-top: 32px;
-        }
-        .section-label {
-            font-size: 11px;
-            text-transform: uppercase;
-            letter-spacing: 0.25em;
-            color: var(--muted);
-            margin-bottom: 8px;
-        }
-        .section-title {
-            font-size: 20px;
-            margin-bottom: 12px;
-        }
-        .grid {
-            display: grid;
-            gap: 18px;
-        }
-        @media (min-width: 820px) {
-            .grid-2 {
-                grid-template-columns: 3fr 2fr;
-            }
-        }
-        .card {
-            background: var(--card);
-            border-radius: var(--radius-lg);
-            border: 1px solid var(--border);
-            padding: 16px 18px;
-            box-shadow: 0 18px 45px rgba(15, 23, 42, 0.7);
-        }
-        .card p {
-            font-size: 14px;
-            color: #e5e7eb;
-        }
-        .card p + p {
-            margin-top: 10px;
-        }
-
-        .meta-line {
-            font-size: 12px;
-            color: var(--muted);
-            margin-top: 10px;
-        }
-
-        .links-list {
-            list-style: none;
-            font-size: 14px;
-        }
-        .links-list li + li {
-            margin-top: 6px;
-        }
-        .links-list a {
-            color: var(--accent-strong);
-        }
-        .links-list a:hover {
-            text-decoration: underline;
-        }
-
-        /* Contact */
-        .contact-label {
-            font-size: 13px;
-            color: var(--muted);
-            margin-bottom: 8px;
-        }
-        .contact-email {
-            font-size: 15px;
-            font-weight: 500;
-            color: var(--accent-strong);
+        .book p {
+            margin:0 0 10px 0;
         }
 
         footer {
-            margin-top: 34px;
-            font-size: 11px;
-            color: var(--muted);
-            text-align: center;
+            margin-top:60px;
+            padding:20px;
+            text-align:center;
+            font-size:12px;
+            color:#777;
+            border-top:1px solid #eee;
         }
+
+        /* language display */
+        [lang="ro"] { display:block; }
+        [lang="en"] { display:none; }
+        .active-lang-ro [lang="ro"] { display:block; }
+        .active-lang-ro [lang="en"] { display:none; }
+        .active-lang-en [lang="ro"] { display:none; }
+        .active-lang-en [lang="en"] { display:block; }
     </style>
 </head>
-<body>
-<div class="page">
+<body class="active-lang-ro">
 
-    <header class="topbar">
-        <div class="logo-mark">
-            <div class="logo-circle">AN</div>
-            <div class="logo-text">Adi Novac</div>
-        </div>
-        <nav class="nav">
-            <a href="#despre">Despre</a>
-            <a href="#carte">Cartea</a>
-            <a href="#urmaresti">Urmărește</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+<header>
+    <h1>Adi Novac</h1>
+    <nav>
+        <a href="#about">Despre / About</a>
+        <a href="#books">Cărți / Books</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
 
-    <section class="hero">
-        <div class="hero-inner">
-            <div>
-                <div class="hero-kicker">
-                    <span></span>
-                    Nou roman
-                    <strong style="font-weight:500; color:#e5e7eb; margin-left:4px;">New York Love Machine</strong>
-                </div>
-                <h1 class="hero-title">Povești despre dorință, haos și orașe care nu dorm.</h1>
-                <p class="hero-subtitle">
-                    Ficțiune contemporană urbană, cu relații complicate, decizii riscante și personaje care încearcă să nu se piardă pe ei înșiși.
-                </p>
-                <p class="hero-highlight">
-                    Iubirea ca adicție, ca transformare, ca supraviețuire. 
-                    <mark>New York Love Machine</mark> urmărește ce se întâmplă când vrei totul și, fără să-ți dai seama, începi să pierzi exact ce contează.
-                </p>
-                <div class="hero-buttons">
-                    <a href="https://www.amazon.com/dp/ID-CARTE" target="_blank" class="btn btn-primary">
-                        Vezi New York Love Machine pe Amazon
-                    </a>
-                    <a href="#carte" class="btn btn-ghost">
-                        Citește mai mult despre carte
-                    </a>
-                </div>
-                <div class="hero-tagline">
-                    Ficțiune contemporană • Romance urban • Dramă psihologică
-                </div>
-            </div>
+<div class="container">
 
-            <div class="book-card" id="carte">
-                <div class="book-glow"></div>
-                <div style="position:relative; z-index:1;">
-                    <div class="book-pill">Roman de debut · 2025</div>
-                    <div class="book-title">New York Love Machine</div>
-                    <div class="book-city">New York City</div>
-                    <p class="book-blurb">
-                        Un protagonist prins între ambiție, dorință și legături care îl consumă, într-un oraș care nu iartă nimic. 
-                        Viață de noapte, mesaje la ore imposibile, promisiuni bune doar cât durează adrenalina.
-                    </p>
-                    <div class="chips">
-                        <div class="chip hot">Ficțiune contemporană</div>
-                        <div class="chip">Romance urban</div>
-                        <div class="chip">Dramă psihologică</div>
-                        <div class="chip">Pentru fanii poveștilor intense</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <div class="lang-switch">
+        <a onclick="switchLang('ro')">Română</a> |
+        <a onclick="switchLang('en')">English</a>
+    </div>
 
-    <section id="despre">
-        <div class="section-label">Autor</div>
-        <h2 class="section-title">Despre Adi Novac</h2>
-        <div class="grid grid-2">
-            <div class="card">
-                <p>
-                    Adi Novac este un autor român pasionat de povești care explorează dorința, haosul interior și relațiile moderne.
-                    Îl interesează mai mult întrebările incomode decât răspunsurile perfecte și mai mult personajele imperfecte decât eroii clasici.
-                </p>
-                <p>
-                    Scrisul lui îmbină realismul emoțional cu ritmul orașelor mari: nopți care se termină prea târziu, decizii luate prea repede,
-                    mesaje șterse, reveniri, dependențe emoționale și momente în care totul pare să se rupă.
-                </p>
-            </div>
-            <div class="card">
-                <p>
-                    Când nu scrie, Adi observă oamenii, notează replici și construiește scene în minte: ce se întâmplă după ce se închide ușa,
-                    ce e în spatele unui mesaj simplu de “hai că vorbim”.
-                </p>
-                <p class="meta-line">
-                    Temele recurente: orașe care cer un preț, iubire ca negociere, roluri pe care le jucăm ca să nu rămânem singuri.
-                </p>
-            </div>
-        </div>
-    </section>
+    <!-- ABOUT -->
+    <div id="about" class="section">
 
-    <section id="urmaresti">
-        <div class="section-label">Online</div>
-        <h2 class="section-title">Unde poți urmări ce urmează</h2>
-        <div class="grid grid-2">
-            <div class="card">
-                <p>
-                    Noutăți despre lansări, fragmente din cărți și idei din culise vor fi anunțate mai întâi online. 
-                    Dacă vrei să prinzi următoarele proiecte din timp, urmărește-l pe Adi sau abonează-te la un newsletter scurt,
-                    fără spam.
-                </p>
-            </div>
-            <div class="card">
-                <ul class="links-list">
-                    <li>
-                        Amazon Author Page:
-                        <a href="https://www.amazon.com/author/adinovac" target="_blank">
-                            pagina de autor Amazon
-                        </a>
-                    </li>
-                    <li>
-                        Instagram:
-                        <a href="https://www.instagram.com/adinovac" target="_blank">
-                            @adinovac
-                        </a>
-                    </li>
-                    <li>
-                        Newsletter:
-                        <a href="#" target="_blank">
-                            abonează-te pentru noutăți și fragmente
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
+        <h2 lang="ro">Despre Adi Novac</h2>
+        <h2 lang="en">About Adi Novac</h2>
 
-    <section id="contact">
-        <div class="section-label">Contact</div>
-        <h2 class="section-title">Invitații, colaborări, întrebări</h2>
-        <div class="card">
-            <p class="contact-label">
-                Pentru interviuri, invitații la evenimente, cluburi de carte sau proiecte editoriale:
+        <p lang="ro">
+            Adi Novac este autor și eseist român, cu un stil direct, introspectiv și centrat pe relațiile dintre oameni,
+            dorințe, vulnerabilități și orașe care modelează sau distrug caractere. Scrisul său combină observație psihologică,
+            tensiune emoțională și ritmul vieții urbane.
+        </p>
+
+        <p lang="en">
+            Adi Novac is a Romanian author and essayist whose writing explores desire, vulnerability, emotional intensity,
+            and the invisible forces that shape human relationships. His work blends psychological insight with the fast tempo
+            of modern urban life.
+        </p>
+
+    </div>
+
+    <!-- BOOKS -->
+    <div id="books" class="section">
+
+        <h2 lang="ro">Cărțile mele</h2>
+        <h2 lang="en">My Books</h2>
+
+        <!-- BOOK 1 -->
+        <div class="book">
+            <h3 lang="ro">Eu, Seinfeld și tumoarea</h3>
+            <h3 lang="en">Me, Seinfeld and the Tumor</h3>
+
+            <p lang="ro">
+                O carte despre identitate, umor, frică și modul bizar în care trecutul, boala și cultura pop se împletesc.
+                Un amestec de vulnerabilitate și luciditate, cu accente autobiografice și observații amare, dar sincere.
             </p>
-            <p class="contact-email">
-                <a href="mailto:contact@adinovac.com">contact@adinovac.com</a>
-            </p>
-            <p class="meta-line">
-                Se răspunde în măsura posibilului; mesajele legate de carte au prioritate.
-            </p>
-        </div>
-    </section>
 
-    <footer>
-        © <span id="year"></span> Adi Novac. New York Love Machine.
-    </footer>
+            <p lang="en">
+                A book about identity, humor, fear, and the strange ways illness, memory, and pop culture blend together.
+                A mix of vulnerability and sharp introspection with autobiographical undertones.
+            </p>
+
+            <p><a href="#" lang="ro">Vezi pe Amazon</a><a href="#" lang="en">View on Amazon</a></p>
+        </div>
+
+        <!-- BOOK 2 -->
+        <div class="book">
+            <h3 lang="ro">Despre femei și îngeri</h3>
+            <h3 lang="en">On Women and Angels</h3>
+
+            <p lang="ro">
+                O colecție de texte despre feminitate, fragilitate, forță, idealizare și destrămare. Explorări
+                poetice și realiste în același timp, despre îngeri metaforici și femei reale.
+            </p>
+
+            <p lang="en">
+                A collection of pieces exploring femininity, fragility, power, idealization, and collapse. A poetic yet sharp
+                look at real women and symbolic angels.
+            </p>
+
+            <p><a href="#" lang="ro">Vezi pe Amazon</a><a href="#" lang="en">View on Amazon</a></p>
+        </div>
+
+        <!-- BOOK 3 -->
+        <div class="book">
+            <h3 lang="ro">New York Love Machine</h3>
+            <h3 lang="en">New York Love Machine</h3>
+
+            <p lang="ro">
+                O poveste urbană despre ambiție, dorință, dependență emoțională și orașe care nu iartă. Un roman cu ritm,
+                tensiune și personaje care caută totul, riscând să piardă ce contează.
+            </p>
+
+            <p lang="en">
+                An urban story about ambition, desire, emotional dependence, and cities that never forgive. A novel about
+                people who want everything and risk losing the one thing that matters.
+            </p>
+
+            <p><a href="#" lang="ro">Vezi pe Amazon</a><a href="#" lang="en">View on Amazon</a></p>
+        </div>
+
+    </div>
+
+    <!-- CONTACT -->
+    <div id="contact" class="section">
+        <h2 lang="ro">Contact</h2>
+        <h2 lang="en">Contact</h2>
+
+        <p lang="ro">
+            Pentru invitații, colaborări sau discuții literare:
+        </p>
+        <p lang="en">
+            For inquiries, collaborations, or literary discussions:
+        </p>
+
+        <p><strong>contact@adinovac.com</strong></p>
+    </div>
 </div>
 
+<footer>
+    © <span id="year"></span> Adi Novac.
+</footer>
+
 <script>
+    function switchLang(lang){
+        document.body.className = lang === 'ro' ? 'active-lang-ro' : 'active-lang-en';
+    }
     document.getElementById("year").textContent = new Date().getFullYear();
 </script>
+
 </body>
 </html>
