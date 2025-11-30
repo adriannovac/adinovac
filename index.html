@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Adi Novac – Autor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Pagina oficială a autorului Adi Novac – New York Love Machine. Biografie, carte, contact.">
+    <style>
+        :root {
+            --bg: #f5f5f7;
+            --text: #1f1f23;
+            --accent: #2f6fed;
+            --accent-soft: #e3ebff;
+            --card: #ffffff;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        header {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 40px 16px 16px;
+        }
+        .hero-text h1 {
+            font-size: 36px;
+            margin-bottom: 6px;
+        }
+        .hero-text h2 {
+            font-size: 18px;
+            font-weight: 400;
+            color: #555;
+            margin-bottom: 16px;
+        }
+        .hero-text p {
+            max-width: 620px;
+            margin-bottom: 20px;
+        }
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .btn {
+            padding: 10px 18px;
+            border-radius: 999px;
+            text-decoration: none;
+            font-size: 14px;
+            display: inline-flex;
+            align-items: center;
+            cursor: pointer;
+            border: 1px solid transparent;
+        }
+        .btn-primary {
+            background: var(--accent);
+            color: white;
+        }
+        .btn-primary:hover {
+            background: #244ec9;
+        }
+        .btn-ghost {
+            background: transparent;
+            color: var(--accent);
+            border-color: var(--accent-soft);
+        }
+        .btn-ghost:hover {
+            background: var(--accent-soft);
+        }
+        main {
+            max-width: 960px;
+            margin: 0 auto 40px;
+            padding: 0 16px 24px;
+        }
+        section { margin-top: 40px; }
+        h3.section-title {
+            font-size: 22px;
+            margin-bottom: 14px;
+        }
+        .card {
+            background: var(--card);
+            padding: 18px 20px;
+            border-radius: 14px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+        .bio-text p { margin-bottom: 14px; }
+        .book-item { margin-bottom: 24px; }
+        .book-meta h4 {
+            font-size: 18px;
+            margin-bottom: 6px;
+        }
+        .book-meta p {
+            font-size: 15px;
+            margin-bottom: 8px;
+        }
+        .meta-tag {
+            display: inline-block;
+            padding: 3px 10px;
+            background: #eef0f4;
+            color: #444;
+            font-size: 12px;
+            border-radius: 999px;
+            margin-right: 6px;
+            margin-bottom: 6px;
+        }
+        .links-list { list-style: none; font-size: 14px; }
+        .links-list li { margin-bottom: 6px; }
+        .links-list a { color: var(--accent); text-decoration: none; }
+        .links-list a:hover { text-decoration: underline; }
+        footer {
+            text-align: center;
+            font-size: 12px;
+            color: #777;
+            padding: 16px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="hero-text">
+        <h1>Adi Novac</h1>
+        <h2>Autor de ficțiune contemporană</h2>
+        <p>
+            Adi Novac este un autor român pasionat de povești care explorează dorința, haosul interior și relațiile moderne. 
+            Scrisul lui îmbină realismul emoțional cu ritmul alert al vieții urbane, oferind cititorului atât intensitate,
+            cât și vulnerabilitate.
+        </p>
+        <div class="hero-buttons">
+            <a href="https://www.amazon.com/" class="btn btn-primary" target="_blank">Vezi cartea pe Amazon</a>
+            <a href="#contact" class="btn btn-ghost">Contactează-mă</a>
+        </div>
+    </div>
+</header>
+
+<main>
+
+    <section id="bio">
+        <h3 class="section-title">Despre mine</h3>
+        <div class="card bio-text">
+            <p>
+                Adi Novac este un autor român pasionat de povești care explorează dorința, haosul interior și relațiile moderne.
+                Trăiește între introspecția personală și energia orașelor mari, iar scrierile sale surprind tensiunea dintre cele două spații.
+            </p>
+            <p>
+                Stilul lui combină vulnerabilitatea, ritmul urban și observația psihologică, creând povești care rămân cu cititorul 
+                mult după ce cartea s-a închis.
+            </p>
+        </div>
+    </section>
+
+    <section id="books">
+        <h3 class="section-title">Cărțile mele</h3>
+        <div class="card">
+
+            <div class="book-item">
+                <div class="book-meta">
+                    <h4>New York Love Machine</h4>
+                    <p>
+                        „New York Love Machine” urmărește un protagonist prins între ambiție, dorință și legături care îl consumă,
+                        într-un oraș care nu doarme și nu iartă. Povestea explorează iubirea ca adicție, transformare și supraviețuire –
+                        totul pe fundalul brutal și seducător al New York-ului.
+                    </p>
+                    <div>
+                        <span class="meta-tag">Ficțiune contemporană</span>
+                        <span class="meta-tag">Romance urban</span>
+                        <span class="meta-tag">Dramă psihologică</span>
+                        <span class="meta-tag">An publicare: 2025</span>
+                    </div>
+                    <p>
+                        Link:
+                        <a href="https://www.amazon.com/dp/ID-CARTE" target="_blank">vezi cartea pe Amazon</a>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="links">
+        <h3 class="section-title">Unde mă poți urmări</h3>
+        <div class="card">
+            <ul class="links-list">
+                <li>Instagram: <a href="#" target="_blank">@adinovac</a></li>
+                <li>Newsletter: <a href="#" target="_blank">abonare la noutăți</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h3 class="section-title">Contact</h3>
+        <div class="card">
+            <p>Pentru colaborări, interviuri sau întrebări:</p>
+            <p>Email: <a href="mailto:contact@adinovac.com">contact@adinovac.com</a></p>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    © <span id="year"></span> Adi Novac. Toate drepturile rezervate.
+</footer>
+
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
