@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Adi Novac – Author</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -20,413 +21,386 @@
             --border: #e3d6ca;
             --radius-lg: 18px;
         }
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+        * { box-sizing:border-box; margin:0; padding:0; }
         body {
-            font-family: "Source Sans 3", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-            background: radial-gradient(circle at top, #fbeee3 0, #faf6f2 55%, #f7f2ec 100%);
-            color: var(--text);
+            font-family:"Source Sans 3", system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI",sans-serif;
+            background: radial-gradient(circle at top, #fbeee3 0, #faf6f2 50%, #f7f2ec 100%);
+            color:var(--text);
         }
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
+        a { color:inherit; text-decoration:none; }
 
         .page {
-            max-width: 1120px;
-            margin: 0 auto;
-            padding: 18px 18px 40px;
+            max-width:1120px;
+            margin:0 auto;
+            padding:18px 18px 40px;
         }
 
         /* Header */
         header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 6px 2px 18px;
-            position: sticky;
-            top: 0;
-            z-index: 20;
-            backdrop-filter: blur(14px);
-            background: linear-gradient(to bottom, rgba(250,246,242,0.96), rgba(250,246,242,0.85), transparent);
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            padding:10px 2px 20px;
+            position:sticky;
+            top:0;
+            z-index:20;
+            backdrop-filter:blur(14px);
+            background:linear-gradient(to bottom, rgba(250,246,242,0.96), rgba(250,246,242,0.85), transparent);
         }
         .brand {
-            display: flex;
-            align-items: center;
-            gap: 10px;
+            display:flex;
+            align-items:center;
+            gap:10px;
         }
         .brand-mark {
-            width: 34px;
-            height: 34px;
-            border-radius: 50%;
-            background: radial-gradient(circle at 30% 30%, #f4c7a5, #c57a5a);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: "Playfair Display", serif;
-            font-size: 16px;
-            color: #fffaf4;
-            box-shadow: 0 0 16px rgba(197, 122, 90, 0.7);
+            width:36px;
+            height:36px;
+            border-radius:50%;
+            background:radial-gradient(circle at 30% 30%, #f4c7a5, #c57a5a);
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            font-family:"Playfair Display", serif;
+            font-size:16px;
+            color:#fffaf4;
+            box-shadow:0 0 16px rgba(197,122,90,0.7);
         }
         .brand-text-main {
-            font-family: "Playfair Display", serif;
-            font-size: 20px;
-            letter-spacing: 0.04em;
+            font-family:"Playfair Display", serif;
+            font-size:22px;
+            letter-spacing:0.04em;
         }
         .brand-text-sub {
-            font-size: 11px;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-            color: var(--muted);
+            font-size:11px;
+            letter-spacing:0.18em;
+            text-transform:uppercase;
+            color:var(--muted);
         }
 
         .nav {
-            display: flex;
-            align-items: center;
-            gap: 18px;
-            font-size: 14px;
+            display:flex;
+            align-items:center;
+            gap:18px;
+            font-size:14px;
         }
         .nav-link {
-            position: relative;
-            padding: 4px 0;
-            color: var(--muted);
-            cursor: pointer;
+            position:relative;
+            padding:4px 0;
+            color:var(--muted);
+            cursor:pointer;
         }
         .nav-link::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: -3px;
-            width: 0;
-            height: 2px;
-            background: linear-gradient(90deg, var(--accent), var(--accent-strong));
-            transition: width 0.2s ease;
+            content:"";
+            position:absolute;
+            left:0;
+            bottom:-3px;
+            width:0;
+            height:2px;
+            background:linear-gradient(90deg, var(--accent), var(--accent-strong));
+            transition:width 0.2s ease;
         }
         .nav-link:hover {
-            color: var(--accent-strong);
+            color:var(--accent-strong);
         }
         .nav-link:hover::after {
-            width: 100%;
+            width:100%;
         }
 
         .lang-toggle {
-            padding: 5px 10px;
-            border-radius: 999px;
-            border: 1px solid #d5c6ba;
-            background: #fffaf4;
-            font-size: 12px;
-            color: var(--muted);
-            cursor: pointer;
-            transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+            padding:5px 10px;
+            border-radius:999px;
+            border:1px solid #d5c6ba;
+            background:#fffaf4;
+            font-size:12px;
+            color:var(--muted);
+            cursor:pointer;
+            transition:background 0.15s ease,border-color 0.15s ease,color 0.15s ease;
         }
         .lang-toggle:hover {
-            background: var(--accent-soft);
-            border-color: var(--accent-strong);
-            color: var(--accent-strong);
+            background:var(--accent-soft);
+            border-color:var(--accent-strong);
+            color:var(--accent-strong);
         }
 
         /* Hero */
         .hero {
-            margin-top: 10px;
-            border-radius: 26px;
-            padding: 26px 22px 26px;
+            margin-top:8px;
+            border-radius:26px;
+            padding:28px 22px 26px;
             background:
-                radial-gradient(circle at top left, rgba(245, 207, 183, 0.8), transparent 55%),
-                radial-gradient(circle at bottom right, rgba(234, 213, 196, 0.9), transparent 65%),
-                linear-gradient(135deg, #fffdf9, #f9f1ea);
-            border: 1px solid rgba(226, 210, 196, 0.85);
-            box-shadow: 0 22px 60px rgba(158, 119, 97, 0.25);
+                radial-gradient(circle at top left, rgba(245,207,183,0.8), transparent 55%),
+                radial-gradient(circle at bottom right, rgba(234,213,196,0.9), transparent 65%),
+                linear-gradient(135deg,#fffdf9,#f9f1ea);
+            border:1px solid rgba(226,210,196,0.85);
+            box-shadow:0 22px 60px rgba(158,119,97,0.25);
         }
         .hero-inner {
-            display: grid;
-            gap: 22px;
+            display:grid;
+            gap:22px;
         }
-        @media (min-width: 840px) {
+        @media (min-width:860px) {
             .hero-inner {
-                grid-template-columns: 3fr 2.2fr;
-                align-items: center;
+                grid-template-columns:3fr 2.1fr;
+                align-items:center;
             }
         }
 
         .hero-kicker {
-            font-size: 12px;
-            letter-spacing: 0.18em;
-            text-transform: uppercase;
-            color: var(--muted);
-            margin-bottom: 10px;
+            font-size:12px;
+            letter-spacing:0.18em;
+            text-transform:uppercase;
+            color:var(--muted);
+            margin-bottom:10px;
         }
         .hero-title {
-            font-family: "Playfair Display", serif;
-            font-size: clamp(30px, 4vw, 40px);
-            line-height: 1.18;
-            margin-bottom: 8px;
+            font-family:"Playfair Display", serif;
+            font-size:clamp(30px,4vw,40px);
+            line-height:1.16;
+            margin-bottom:8px;
         }
         .hero-sub {
-            font-size: 15px;
-            color: var(--muted);
-            margin-bottom: 14px;
+            font-size:15px;
+            color:var(--muted);
+            margin-bottom:14px;
         }
         .hero-text {
-            font-size: 14px;
-            max-width: 520px;
-            margin-bottom: 18px;
+            font-size:14px;
+            max-width:520px;
+            margin-bottom:18px;
         }
         .hero-text mark {
-            background: transparent;
-            color: var(--accent-strong);
+            background:transparent;
+            color:var(--accent-strong);
         }
 
         .hero-buttons {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-bottom: 8px;
+            display:flex;
+            flex-wrap:wrap;
+            gap:10px;
+            margin-bottom:8px;
         }
         .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 7px;
-            padding: 9px 16px;
-            border-radius: 999px;
-            border: 1px solid transparent;
-            font-size: 13px;
-            cursor: pointer;
-            transition: background 0.15s ease, border-color 0.15s ease, transform 0.1s ease, box-shadow 0.15s ease;
+            display:inline-flex;
+            align-items:center;
+            justify-content:center;
+            gap:7px;
+            padding:9px 16px;
+            border-radius:999px;
+            border:1px solid transparent;
+            font-size:13px;
+            cursor:pointer;
+            transition:background 0.15s ease,border-color 0.15s ease,transform 0.1s ease,box-shadow 0.15s ease;
         }
         .btn-primary {
-            background: linear-gradient(135deg, var(--accent), var(--accent-strong));
-            color: #fffaf4;
-            box-shadow: 0 10px 26px rgba(170, 106, 79, 0.6);
+            background:linear-gradient(135deg,var(--accent),var(--accent-strong));
+            color:#fffaf4;
+            box-shadow:0 10px 26px rgba(170,106,79,0.6);
         }
         .btn-primary:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 14px 34px rgba(170, 106, 79, 0.7);
+            transform:translateY(-1px);
+            box-shadow:0 14px 34px rgba(170,106,79,0.7);
         }
         .btn-ghost {
-            background: #fffaf4;
-            border-color: #e1d3c7;
-            color: var(--muted);
+            background:#fffaf4;
+            border-color:#e1d3c7;
+            color:var(--muted);
         }
         .btn-ghost:hover {
-            background: var(--accent-soft);
-            border-color: var(--accent-strong);
-            color: var(--accent-strong);
+            background:var(--accent-soft);
+            border-color:var(--accent-strong);
+            color:var(--accent-strong);
         }
 
         .hero-meta {
-            font-size: 12px;
-            color: var(--muted);
-            margin-top: 6px;
+            font-size:12px;
+            color:var(--muted);
+            margin-top:6px;
         }
 
-        .feature-card {
-            border-radius: 22px;
-            padding: 18px 18px 16px;
-            background: linear-gradient(145deg, #fffefd, #f4e6da);
-            border: 1px solid #e4d3c6;
-            box-shadow: 0 14px 40px rgba(158, 119, 97, 0.25);
+        .hero-photo-card {
+            border-radius:22px;
+            padding:18px 18px 16px;
+            background:linear-gradient(145deg,#fffefd,#f4e6da);
+            border:1px solid #e4d3c6;
+            box-shadow:0 14px 40px rgba(158,119,97,0.25);
+            display:grid;
+            gap:12px;
         }
-        .feature-label {
-            font-size: 11px;
-            letter-spacing: 0.14em;
-            text-transform: uppercase;
-            color: var(--muted);
-            margin-bottom: 4px;
+        @media (min-width:860px) {
+            .hero-photo-card {
+                grid-template-rows:auto auto;
+            }
         }
-        .feature-title {
-            font-family: "Playfair Display", serif;
-            font-size: 20px;
-            margin-bottom: 6px;
+        .author-photo-placeholder {
+            width:100%;
+            aspect-ratio:3/4;
+            border-radius:18px;
+            background:linear-gradient(145deg,#e9d2c1,#fdf7f2);
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            color:#b08a73;
+            font-size:12px;
+            border:1px dashed #d9c3b4;
         }
-        .feature-city {
-            font-size: 12px;
-            letter-spacing: 0.19em;
-            text-transform: uppercase;
-            color: var(--accent-strong);
-            margin-bottom: 10px;
+        .author-photo-placeholder span {
+            text-align:center;
+            padding:0 10px;
         }
-        .feature-text {
-            font-size: 13px;
-            color: #5f4f46;
-            margin-bottom: 10px;
-        }
-        .feature-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-            font-size: 11px;
-        }
-        .tag-pill {
-            padding: 4px 9px;
-            border-radius: 999px;
-            background: #fdf7f2;
-            border: 1px solid #e2c9b9;
-            color: #7c5644;
+        .hero-photo-text {
+            font-size:13px;
+            color:#5f4f46;
         }
 
         /* Sections */
-        section {
-            margin-top: 40px;
-        }
+        section { margin-top:40px; }
         .section-label {
-            font-size: 11px;
-            letter-spacing: 0.22em;
-            text-transform: uppercase;
-            color: var(--muted);
-            margin-bottom: 6px;
+            font-size:11px;
+            letter-spacing:0.22em;
+            text-transform:uppercase;
+            color:var(--muted);
+            margin-bottom:6px;
         }
         .section-title {
-            font-family: "Playfair Display", serif;
-            font-size: 22px;
-            margin-bottom: 12px;
+            font-family:"Playfair Display", serif;
+            font-size:22px;
+            margin-bottom:12px;
         }
         .grid {
-            display: grid;
-            gap: 18px;
+            display:grid;
+            gap:18px;
         }
-        @media (min-width: 840px) {
-            .grid-2 {
-                grid-template-columns: 3fr 2fr;
-            }
+        @media (min-width:860px) {
+            .grid-2 { grid-template-columns:3fr 2fr; }
         }
 
         .card {
-            background: var(--card);
-            border-radius: var(--radius-lg);
-            border: 1px solid var(--border);
-            padding: 18px 18px 16px;
-            box-shadow: 0 10px 26px rgba(180, 150, 129, 0.22);
+            background:var(--card);
+            border-radius:var(--radius-lg);
+            border:1px solid var(--border);
+            padding:18px 18px 16px;
+            box-shadow:0 10px 26px rgba(180,150,129,0.22);
         }
         .card p {
-            font-size: 14px;
-            line-height: 1.6;
-            color: #4f4036;
+            font-size:14px;
+            line-height:1.6;
+            color:#4f4036;
         }
-        .card p + p {
-            margin-top: 10px;
-        }
+        .card p + p { margin-top:10px; }
 
-        /* Books grid */
+        /* Books */
         .books-grid {
-            display: grid;
-            gap: 16px;
-            margin-top: 6px;
+            display:grid;
+            gap:16px;
+            margin-top:6px;
         }
-        @media (min-width: 860px) {
+        @media (min-width:860px) {
             .books-grid {
-                grid-template-columns: repeat(3, minmax(0, 1fr));
+                grid-template-columns:repeat(3,minmax(0,1fr));
             }
         }
         .book-card {
-            background: var(--card);
-            border-radius: 16px;
-            border: 1px solid var(--border);
-            padding: 12px 12px 12px;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            min-height: 180px;
-            transition: transform 0.14s ease, box-shadow 0.14s ease, border-color 0.14s ease, background 0.14s ease;
+            background:var(--card);
+            border-radius:16px;
+            border:1px solid var(--border);
+            padding:12px 12px 12px;
+            display:flex;
+            flex-direction:column;
+            gap:10px;
+            min-height:180px;
+            transition:transform 0.14s ease,box-shadow 0.14s ease,border-color 0.14s ease,background 0.14s ease;
         }
         .book-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 16px 40px rgba(180, 150, 129, 0.4);
-            border-color: var(--accent-strong);
-            background: #fffaf5;
+            transform:translateY(-3px);
+            box-shadow:0 16px 40px rgba(180,150,129,0.4);
+            border-color:var(--accent-strong);
+            background:#fffaf5;
         }
         .book-cover-thumb {
-            width: 100%;
-            border-radius: 12px;
-            margin-bottom: 8px;
-            object-fit: cover;
-            max-height: 230px;
-            box-shadow: 0 10px 24px rgba(180, 150, 129, 0.35);
+            width:100%;
+            border-radius:12px;
+            margin-bottom:8px;
+            object-fit:cover;
+            max-height:230px;
+            box-shadow:0 10px 24px rgba(180,150,129,0.35);
         }
         .book-title {
-            font-family: "Playfair Display", serif;
-            font-size: 16px;
+            font-family:"Playfair Display", serif;
+            font-size:16px;
         }
         .book-tagline {
-            font-size: 13px;
-            color: var(--muted);
+            font-size:13px;
+            color:var(--muted);
         }
         .book-link {
-            margin-top: auto;
-            font-size: 12px;
-            color: var(--accent-strong);
+            margin-top:auto;
+            font-size:12px;
+            color:var(--accent-strong);
         }
 
-        /* Newsletter / follow */
+        /* Links / newsletter */
         .links-list {
-            list-style: none;
-            font-size: 14px;
+            list-style:none;
+            font-size:14px;
         }
-        .links-list li + li {
-            margin-top: 6px;
-        }
+        .links-list li + li { margin-top:6px; }
         .links-list a {
-            color: var(--accent-strong);
+            color:var(--accent-strong);
         }
-        .links-list a:hover {
-            text-decoration: underline;
-        }
+        .links-list a:hover { text-decoration:underline; }
 
         .newsletter-inputs {
-            margin-top: 8px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
+            margin-top:8px;
+            display:flex;
+            flex-wrap:wrap;
+            gap:8px;
         }
         .newsletter-inputs input {
-            padding: 7px 10px;
-            border-radius: 999px;
-            border: 1px solid #d9c9bc;
-            font-size: 13px;
-            flex: 1 1 180px;
+            padding:7px 10px;
+            border-radius:999px;
+            border:1px solid #d9c9bc;
+            font-size:13px;
+            flex:1 1 180px;
         }
         .newsletter-inputs button {
-            padding: 7px 14px;
-            border-radius: 999px;
-            border: 1px solid var(--accent);
-            background: var(--accent);
-            color: #fffaf4;
-            font-size: 13px;
-            cursor: pointer;
+            padding:7px 14px;
+            border-radius:999px;
+            border:1px solid var(--accent);
+            background:var(--accent);
+            color:#fffaf4;
+            font-size:13px;
+            cursor:pointer;
         }
         .newsletter-inputs button:hover {
-            background: var(--accent-strong);
-            border-color: var(--accent-strong);
+            background:var(--accent-strong);
+            border-color:var(--accent-strong);
         }
 
         .contact-email {
-            font-size: 15px;
-            color: var(--accent-strong);
-            margin-top: 6px;
+            font-size:15px;
+            color:var(--accent-strong);
+            margin-top:6px;
         }
         .meta-line {
-            font-size: 12px;
-            color: var(--muted);
-            margin-top: 6px;
+            font-size:12px;
+            color:var(--muted);
+            margin-top:6px;
         }
 
         footer {
-            margin-top: 32px;
-            font-size: 11px;
-            color: var(--muted);
-            text-align: center;
+            margin-top:32px;
+            font-size:11px;
+            color:var(--muted);
+            text-align:center;
         }
 
         /* Language */
-        [lang="ro"] { display: block; }
-        [lang="en"] { display: none; }
-        .lang-ro [lang="ro"] { display: block; }
-        .lang-ro [lang="en"] { display: none; }
-        .lang-en [lang="ro"] { display: none; }
-        .lang-en [lang="en"] { display: block; }
+        [lang="ro"] { display:block; }
+        [lang="en"] { display:none; }
+        .lang-ro [lang="ro"] { display:block; }
+        .lang-ro [lang="en"] { display:none; }
+        .lang-en [lang="ro"] { display:none; }
+        .lang-en [lang="en"] { display:block; }
     </style>
 </head>
 <body class="lang-ro">
@@ -443,7 +417,7 @@
         <div class="nav">
             <div class="nav-link" onclick="scrollToSection('books')">Books</div>
             <div class="nav-link" onclick="scrollToSection('about')">About</div>
-            <div class="nav-link" onclick="scrollToSection('follow')">Newsletter</div>
+            <div class="nav-link" onclick="scrollToSection('follow')">News</div>
             <div class="nav-link" onclick="scrollToSection('contact')">Contact</div>
             <button class="lang-toggle" onclick="toggleLang()">RO / EN</button>
         </div>
@@ -501,29 +475,18 @@
                 </div>
             </div>
 
-            <div class="feature-card">
-                <div class="feature-label" lang="ro">Cel mai nou roman</div>
-                <div class="feature-label" lang="en">Latest novel</div>
-
-                <div class="feature-title">New York Love Machine</div>
-                <div class="feature-city">New York City</div>
-
-                <p class="feature-text" lang="ro">
-                    Un protagonist prins între carieră, dorință și relații care devin greu de controlat,
-                    într-un oraș care nu iartă. Nopți lungi, mesaje pe care nu ar fi trebuit să le trimită,
-                    promisiuni care țin cât durează adrenalina.
-                </p>
-                <p class="feature-text" lang="en">
-                    A protagonist caught between career, desire and relationships sliding out of control,
-                    in a city that never forgives. Long nights, messages that should have stayed unsent,
-                    promises that last only as long as the rush.
-                </p>
-
-                <div class="feature-tags">
-                    <div class="tag-pill" lang="ro">Ficțiune contemporană</div>
-                    <div class="tag-pill" lang="en">Contemporary fiction</div>
-                    <div class="tag-pill">Urban</div>
-                    <div class="tag-pill">Character-driven</div>
+            <div class="hero-photo-card">
+                <div class="author-photo-placeholder">
+                    <span lang="ro">Loc pentru poză de autor (când vrei să o adaugi).</span>
+                    <span lang="en">Space for an author photo (when you want to add it).</span>
+                </div>
+                <div class="hero-photo-text" lang="ro">
+                    Site de autor minimalist, concentrat pe cărți și pe contact. Fără elemente care să concureze
+                    cu textele sau cu coperțile.
+                </div>
+                <div class="hero-photo-text" lang="en">
+                    A minimalist author website focused on books and contact. No elements competing with the texts
+                    or the covers.
                 </div>
             </div>
         </div>
@@ -628,7 +591,7 @@
         </div>
     </section>
 
-    <!-- FOLLOW / NEWSLETTER -->
+    <!-- NEWS / FOLLOW -->
     <section id="follow">
         <div class="section-label" lang="ro">Noutăți</div>
         <div class="section-label" lang="en">Updates</div>
@@ -642,7 +605,7 @@
                     Îți poți lăsa adresa de email și vei primi doar mesaje rare, legate de cărți.
                 </p>
                 <p lang="en">
-                    Want to know about launches, new excerpts or events?
+                    Want to hear about launches, new excerpts or events?
                     Leave your email and you will only receive occasional, book-related updates.
                 </p>
                 <div class="newsletter-inputs">
@@ -651,10 +614,10 @@
                     <button type="button" lang="en">Subscribe</button>
                 </div>
                 <p class="meta-line" lang="ro">
-                    Formularul este de prezentare. Poți folosi și direct adresa de email de mai jos.
+                    Formularul este de prezentare. Poți scrie direct și la adresa de mai jos.
                 </p>
                 <p class="meta-line" lang="en">
-                    Form is illustrative. You can also write directly to the email below.
+                    This form is illustrative. You can also write directly to the email below.
                 </p>
             </div>
             <div class="card">
@@ -713,7 +676,7 @@
     }
     function scrollToSection(id) {
         var el = document.getElementById(id);
-        if (el) el.scrollIntoView({ behavior: "smooth" });
+        if (el) el.scrollIntoView({ behavior:"smooth" });
     }
     document.getElementById("year").textContent = new Date().getFullYear();
 </script>
