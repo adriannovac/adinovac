@@ -338,11 +338,13 @@
             border-color: var(--accent-strong);
             background: #fffaf5;
         }
-        .book-spine {
-            height: 6px;
-            border-radius: 999px;
-            background: linear-gradient(90deg, #c57a5a, #e8b596);
-            margin-bottom: 4px;
+        .book-cover-thumb {
+            width: 100%;
+            border-radius: 12px;
+            margin-bottom: 8px;
+            object-fit: cover;
+            max-height: 230px;
+            box-shadow: 0 10px 24px rgba(180, 150, 129, 0.35);
         }
         .book-title {
             font-family: "Playfair Display", serif;
@@ -535,9 +537,12 @@
         <h2 class="section-title" lang="en">Books by Adi Novac</h2>
 
         <div class="books-grid">
+
             <a href="eu-seinfeld-si-tumoarea.html" class="book-card">
                 <div>
-                    <div class="book-spine"></div>
+                    <img src="eu-seinfeld-cover.jpg"
+                         alt="Coperta Eu, Seinfeld și tumoarea"
+                         class="book-cover-thumb">
                     <div class="book-title" lang="ro">Eu, Seinfeld și tumoarea</div>
                     <div class="book-title" lang="en">Me, Seinfeld and the Tumor</div>
                     <div class="book-tagline" lang="ro">
@@ -553,7 +558,9 @@
 
             <a href="despre-femei-si-ingeri.html" class="book-card">
                 <div>
-                    <div class="book-spine"></div>
+                    <img src="femei-ingeri-cover.jpg"
+                         alt="Coperta Despre femei și îngeri"
+                         class="book-cover-thumb">
                     <div class="book-title" lang="ro">Despre femei și îngeri</div>
                     <div class="book-title" lang="en">On Women and Angels</div>
                     <div class="book-tagline" lang="ro">
@@ -569,7 +576,9 @@
 
             <a href="new-york-love-machine.html" class="book-card">
                 <div>
-                    <div class="book-spine"></div>
+                    <img src="nylm-cover.jpg"
+                         alt="Coperta New York Love Machine"
+                         class="book-cover-thumb">
                     <div class="book-title" lang="ro">New York Love Machine</div>
                     <div class="book-title" lang="en">New York Love Machine</div>
                     <div class="book-tagline" lang="ro">
@@ -582,6 +591,7 @@
                 <div class="book-link" lang="ro">Deschide pagina cărții →</div>
                 <div class="book-link" lang="en">Open book page →</div>
             </a>
+
         </div>
     </section>
 
@@ -628,11 +638,11 @@
         <div class="grid grid-2">
             <div class="card">
                 <p lang="ro">
-                    Vrei vești despre lansări, fragmente noi sau evenimente? 
+                    Vrei vești despre lansări, fragmente noi sau evenimente?
                     Îți poți lăsa adresa de email și vei primi doar mesaje rare, legate de cărți.
                 </p>
                 <p lang="en">
-                    Want to know about launches, new excerpts or events? 
+                    Want to know about launches, new excerpts or events?
                     Leave your email and you will only receive occasional, book-related updates.
                 </p>
                 <div class="newsletter-inputs">
