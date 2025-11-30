@@ -2,219 +2,102 @@
 <html lang="ro">
 <head>
     <meta charset="UTF-8">
-    <title>Adi Novac – Autor / Writer</title>
+    <title>New York Love Machine – Adi Novac</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-        body {
-            margin:0;
-            font-family: Arial, sans-serif;
-            background:#fff;
-            color:#222;
-        }
-        header {
-            padding:24px;
-            display:flex;
-            justify-content:space-between;
-            align-items:center;
-            border-bottom:1px solid #ddd;
-        }
-        header h1 {
-            font-size:22px;
-            font-weight:600;
-            margin:0;
-        }
-        nav a {
-            margin-left:16px;
-            text-decoration:none;
-            color:#333;
-            font-size:14px;
-        }
-        nav a:hover { color:#111; }
+        body { margin:0; font-family:system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI",sans-serif; background:#050816; color:#f9fafb; }
+        a { color:inherit; text-decoration:none; }
+        .page { max-width:900px; margin:0 auto; padding:22px 18px 40px; }
+        header { display:flex; justify-content:space-between; align-items:center; margin-bottom:20px; }
+        .logo { font-weight:600; font-size:16px; }
+        .nav a { margin-left:16px; font-size:13px; color:#9ca3af; }
+        .nav a:hover { color:#f97316; }
+        .lang-toggle { font-size:12px; border:1px solid #4b5563; padding:4px 9px; border-radius:999px; background:transparent; color:#9ca3af; cursor:pointer; }
+        .lang-toggle:hover { border-color:#f97316; color:#f97316; }
 
-        .container {
-            max-width:900px;
-            margin:0 auto;
-            padding:30px 20px;
+        .card {
+            background:#0f172a;
+            border-radius:18px;
+            border:1px solid rgba(148,163,184,0.45);
+            padding:18px 18px 20px;
+            box-shadow:0 20px 50px rgba(15,23,42,0.9);
         }
+        h1 { font-size:24px; margin-bottom:6px; }
+        .subtitle { font-size:13px; color:#9ca3af; margin-bottom:14px; }
+        .meta { font-size:12px; color:#9ca3af; margin-bottom:16px; }
+        p { font-size:14px; line-height:1.6; margin-bottom:12px; }
 
-        .lang-switch {
-            margin-top:10px;
-            font-size:14px;
-        }
-        .lang-switch a {
-            margin-right:10px;
-            cursor:pointer;
-            color:#0077cc;
-        }
-        .lang-switch a:hover { text-decoration:underline; }
+        .back-link { margin-top:18px; font-size:13px; color:#f97316; display:inline-block; }
+        .back-link:hover { text-decoration:underline; }
 
-        .section {
-            margin-top:60px;
-        }
-        .section h2 {
-            font-size:20px;
-            margin-bottom:10px;
-        }
-        .section p { line-height:1.5; }
-
-        .book {
-            margin-top:30px;
-            padding:20px;
-            border:1px solid #ddd;
-            border-radius:8px;
-        }
-        .book h3 {
-            font-size:18px;
-            margin:0 0 6px 0;
-        }
-        .book p {
-            margin:0 0 10px 0;
-        }
-
-        footer {
-            margin-top:60px;
-            padding:20px;
-            text-align:center;
-            font-size:12px;
-            color:#777;
-            border-top:1px solid #eee;
-        }
-
-        /* language display */
         [lang="ro"] { display:block; }
         [lang="en"] { display:none; }
-        .active-lang-ro [lang="ro"] { display:block; }
-        .active-lang-ro [lang="en"] { display:none; }
-        .active-lang-en [lang="ro"] { display:none; }
-        .active-lang-en [lang="en"] { display:block; }
+        .lang-ro [lang="ro"] { display:block; }
+        .lang-ro [lang="en"] { display:none; }
+        .lang-en [lang="ro"] { display:none; }
+        .lang-en [lang="en"] { display:block; }
     </style>
 </head>
-<body class="active-lang-ro">
+<body class="lang-ro">
+<div class="page">
+    <header>
+        <div class="logo"><a href="index.html">Adi Novac</a></div>
+        <div class="nav">
+            <a href="index.html#books">Books</a>
+            <button class="lang-toggle" onclick="toggleLang()">RO / EN</button>
+        </div>
+    </header>
 
-<header>
-    <h1>Adi Novac</h1>
-    <nav>
-        <a href="#about">Despre / About</a>
-        <a href="#books">Cărți / Books</a>
-        <a href="#contact">Contact</a>
-    </nav>
-</header>
+    <div class="card">
+        <h1 lang="ro">New York Love Machine</h1>
+        <h1 lang="en">New York Love Machine</h1>
 
-<div class="container">
+        <div class="subtitle" lang="ro">Ambiție, dependență emoțională și un oraș care nu iartă.</div>
+        <div class="subtitle" lang="en">Ambition, emotional addiction and a city that never forgives.</div>
 
-    <div class="lang-switch">
-        <a onclick="switchLang('ro')">Română</a> |
-        <a onclick="switchLang('en')">English</a>
-    </div>
-
-    <!-- ABOUT -->
-    <div id="about" class="section">
-
-        <h2 lang="ro">Despre Adi Novac</h2>
-        <h2 lang="en">About Adi Novac</h2>
+        <div class="meta" lang="ro">Roman / ficțiune contemporană urbană</div>
+        <div class="meta" lang="en">Novel / contemporary urban fiction</div>
 
         <p lang="ro">
-            Adi Novac este autor și eseist român, cu un stil direct, introspectiv și centrat pe relațiile dintre oameni,
-            dorințe, vulnerabilități și orașe care modelează sau distrug caractere. Scrisul său combină observație psihologică,
-            tensiune emoțională și ritmul vieții urbane.
+            Un protagonist prins între carieră, dorință și relații care devin tot mai greu de controlat. New York
+            nu este doar decor, ci un personaj în sine: seducător, extenuant, plin de promisiuni care se plătesc scump.
+            Fiecare ieșire, fiecare mesaj, fiecare noapte prea lungă împinge lucrurile un pic mai mult peste limită.
+        </p>
+        <p lang="ro">
+            New York Love Machine urmărește cum iubirea devine adicție, cum compromisurile mici se adună
+            și cum, la un moment dat, nu mai știi dacă alergi după cineva, după o versiune a ta sau pur și simplu
+            după zgomotul orașului. O carte despre atașamente toxice, autoiluzionare și încercarea de a nu te pierde.
         </p>
 
         <p lang="en">
-            Adi Novac is a Romanian author and essayist whose writing explores desire, vulnerability, emotional intensity,
-            and the invisible forces that shape human relationships. His work blends psychological insight with the fast tempo
-            of modern urban life.
-        </p>
-
-    </div>
-
-    <!-- BOOKS -->
-    <div id="books" class="section">
-
-        <h2 lang="ro">Cărțile mele</h2>
-        <h2 lang="en">My Books</h2>
-
-        <!-- BOOK 1 -->
-        <div class="book">
-            <h3 lang="ro">Eu, Seinfeld și tumoarea</h3>
-            <h3 lang="en">Me, Seinfeld and the Tumor</h3>
-
-            <p lang="ro">
-                O carte despre identitate, umor, frică și modul bizar în care trecutul, boala și cultura pop se împletesc.
-                Un amestec de vulnerabilitate și luciditate, cu accente autobiografice și observații amare, dar sincere.
-            </p>
-
-            <p lang="en">
-                A book about identity, humor, fear, and the strange ways illness, memory, and pop culture blend together.
-                A mix of vulnerability and sharp introspection with autobiographical undertones.
-            </p>
-
-            <p><a href="#" lang="ro">Vezi pe Amazon</a><a href="#" lang="en">View on Amazon</a></p>
-        </div>
-
-        <!-- BOOK 2 -->
-        <div class="book">
-            <h3 lang="ro">Despre femei și îngeri</h3>
-            <h3 lang="en">On Women and Angels</h3>
-
-            <p lang="ro">
-                O colecție de texte despre feminitate, fragilitate, forță, idealizare și destrămare. Explorări
-                poetice și realiste în același timp, despre îngeri metaforici și femei reale.
-            </p>
-
-            <p lang="en">
-                A collection of pieces exploring femininity, fragility, power, idealization, and collapse. A poetic yet sharp
-                look at real women and symbolic angels.
-            </p>
-
-            <p><a href="#" lang="ro">Vezi pe Amazon</a><a href="#" lang="en">View on Amazon</a></p>
-        </div>
-
-        <!-- BOOK 3 -->
-        <div class="book">
-            <h3 lang="ro">New York Love Machine</h3>
-            <h3 lang="en">New York Love Machine</h3>
-
-            <p lang="ro">
-                O poveste urbană despre ambiție, dorință, dependență emoțională și orașe care nu iartă. Un roman cu ritm,
-                tensiune și personaje care caută totul, riscând să piardă ce contează.
-            </p>
-
-            <p lang="en">
-                An urban story about ambition, desire, emotional dependence, and cities that never forgive. A novel about
-                people who want everything and risk losing the one thing that matters.
-            </p>
-
-            <p><a href="#" lang="ro">Vezi pe Amazon</a><a href="#" lang="en">View on Amazon</a></p>
-        </div>
-
-    </div>
-
-    <!-- CONTACT -->
-    <div id="contact" class="section">
-        <h2 lang="ro">Contact</h2>
-        <h2 lang="en">Contact</h2>
-
-        <p lang="ro">
-            Pentru invitații, colaborări sau discuții literare:
+            A protagonist caught between career, desire and relationships that are increasingly out of control.
+            New York is not just a backdrop but a character: seductive, exhausting, full of promises that come with a price.
+            Every night out, every late message, every boundary crossed pushes things further.
         </p>
         <p lang="en">
-            For inquiries, collaborations, or literary discussions:
+            New York Love Machine follows how love turns into addiction, how small compromises accumulate and at some point
+            you no longer know whether you are chasing someone, a version of yourself or just the city’s noise.
+            A story about toxic attachment, self-deception and trying not to lose yourself.
         </p>
 
-        <p><strong>contact@adinovac.com</strong></p>
+        <p lang="ro">
+            Link Amazon: va fi adăugat la publicare.
+        </p>
+        <p lang="en">
+            Amazon link: to be added upon publication.
+        </p>
+
+        <a href="index.html#books" class="back-link" lang="ro">← Înapoi la toate cărțile</a>
+        <a href="index.html#books" class="back-link" lang="en">← Back to all books</a>
     </div>
 </div>
 
-<footer>
-    © <span id="year"></span> Adi Novac.
-</footer>
-
 <script>
-    function switchLang(lang){
-        document.body.className = lang === 'ro' ? 'active-lang-ro' : 'active-lang-en';
+    function toggleLang(){
+        document.body.classList.toggle("lang-en");
+        document.body.classList.toggle("lang-ro");
     }
-    document.getElementById("year").textContent = new Date().getFullYear();
 </script>
-
 </body>
 </html>
+
